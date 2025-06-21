@@ -142,6 +142,10 @@ Estas son algunas de las preguntas que intentamos responder en este podcast con 
 SELECT Podcast.Nombre, Podcast.FechaDeCaducidad FROM Podcast
 WHERE GETDATE() < Podcast.FechaDeCaducidad
 
+Diagrama de la base de datos
+![image](https://github.com/user-attachments/assets/cce44474-c55d-482e-8343-e8ff5ca54552)
+
+
 ESTE PROYECO HA SIDO CREADO CON .NET CORE CON ANGULAR DESDE VISUAL STUDIO POR LO QUE SOLO SE TENDRA QUE DESACARGAR EL PROYECTO Y EJECUTARLO PARA SU FUCNCIONAMIENTO
 
 HACER UN NPM INSTALL PARA INSTALAR LAS DEPENDENCIAS
