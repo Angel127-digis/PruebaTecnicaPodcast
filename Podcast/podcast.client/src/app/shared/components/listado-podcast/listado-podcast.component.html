@@ -1,0 +1,50 @@
+<div class="text-center mb-5 mt-4">
+<a class="btn btn-success" routerLink="/agregar">Agregar Podcast</a>
+</div>
+<section class="tabla text-center">
+  <div class="row">
+    <div class="col">
+      <table class="table align-middle table-responsive table-striped">
+        <thead class="vertical-middle">
+          <tr>
+            <td scope="col">Imagen</td>
+            <td scope="col">Nombre</td>
+            <td scope="col">Informacion</td>
+            <td class="w-25" scope="col">Descripcion</td>
+            <td scope="col">Audio</td>
+            <td scope="col">Idioma</td>
+          </tr>
+        </thead>
+        <tbody>
+          @for(registroPodcas of podcast; track $index){
+          <tr>
+            <td scope="col">{{registroPodcas.imagen}}</td>
+            <td scope="col">{{registroPodcas.nombre}}</td>
+            <td scope="col">
+              <p>
+                <span class="fw-bold">Episodio: </span>{{registroPodcas.episodio.numeroEpisodio}}
+              </p>
+              <p>
+                <span class="fw-bold">Duracion: </span>{{registroPodcas.duracion}} min.
+              </p>
+              <p>
+                <span class="fw-bold">Categoria: {{registroPodcas.categoria.nombreCategoria}}</span>
+              </p>
+              <p>
+                <span class="fw-bold">Fecha de Publicacion: </span>{{registroPodcas.fechaDePublicacion}}
+              </p>
+              <p>
+                <span class="fw-bold">Disponible hasta el: </span>{{registroPodcas.fechaDePublicacion}}
+              </p>
+            </td>
+            <td>{{registroPodcas.descripcion}}</td>
+            <td scope="col">
+              <a href="{{registroPodcas.audioURL}}">{{registroPodcas.audioURL}}</a></td>
+            <td scope="col">{{registroPodcas.idioma.nombreIdioma}}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
